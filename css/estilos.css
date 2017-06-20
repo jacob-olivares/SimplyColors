@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand+SC');
+a{
+    text-align: center;
+    border: 3px solid darkgray;
+}
+
+h1{
+    font-family: 'Patrick Hand SC', cursive;
+}
+
+#login{
+    background: aqua;
+    width: 300px;
+    height: 200px;
+    border: 1px solid cadetblue;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 200px;
+}
+
+input[type=text]{
+    margin: 0 0 1em 0;
+    width: 200px;
+    height: 25px;
+    border: 0px;
+    padding: 1em;
+    border-radius: 5px;
+    margin-left: 30px;
+}
+input[type=password]{
+    margin: 0 0 1em 0;
+    width: 200px;
+    height: 25px;
+    border: 0px;
+    padding: 1em;
+    border-radius: 5px;
+}
+
+input[type=submit]{
+    padding: 1em;
+    background: buttonface;
+    border: none;
+    width: 200px;
+    height: 20px;
+    
+}
