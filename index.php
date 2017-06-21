@@ -10,9 +10,22 @@
     <body>
         
         <?php if(isset($_SESSION['USR'])) { ?>
-            <a href="./model/agregarUsuario.php">Agregar Usuario</a>
-            <a href="./model/modificarUsuario.php">Modificar Usuario</a>
-            <a href="./model/eliminarUsuario.php">Eliminar Usuario</a>
+            <h1>Mantenedor de usuarios: </h1>
+            
+            <div id="mantUsuarios"></div>
+            <a href="formularios/usuario/agregarUsuario.php">Agregar Usuario</a>
+            <a href="formularios/usuario/modificarUsuario.php">Modificar Usuario</a>
+            <a href="formularios/usuario/eliminarUsuario.php">Eliminar Usuario</a>
+            </div>
+
+            <h1>Mantenedor de productos: </h1>
+            
+            <div id="mantProductos">
+            <a href="formularios/producto/agregarProducto.php">Agregar Producto</a>
+            <a href="formularios/producto/modificarProducto.php">Modificar Producto</a>
+            <a href="formularios/producto/eliminarProducto.php">Eliminar Producto</a>
+            </div>
+            
             <a href="cerrar.php">Cerrar Sesion</a>
         <?php } ?> 
         <?php if(!isset($_SESSION['USR'])) { ?>

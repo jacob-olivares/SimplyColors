@@ -4,7 +4,7 @@
         <title></title>
     </head>
     <body>
-        <form action="../controladores/agregar.php" method="POST">
+        <form action="../controladores/usuario/agregar.php" method="POST">
             <div>User: <input type="text" name="user"></div>
             <div>Password: <input type="password" name="pass"></div>
             <div>Confirm Password: <input type="password" name="confirm-pass"></div>
