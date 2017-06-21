@@ -1,6 +1,6 @@
 <?php
-    include '../lib/Usuario.php';
-    include '../lib/Conexion.php';
+    include './librerias.php';
+    include './constantes.php';
 ?>
 <?php
 $user = $_POST['user'];

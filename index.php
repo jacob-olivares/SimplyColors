@@ -1,5 +1,6 @@
 <?php
-    session_start();
+    include './librerias.php';
+    include './constantes.php';
 ?>
 <html>
     <head>

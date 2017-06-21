@@ -1,9 +1,8 @@
 <?php
-session_start();
-
-include 'lib/Conexion.php';
-include 'lib/Usuario.php';
-
+    include './librerias.php';
+    include './constantes.php';
+?>
+<?php
 $oUsr = new Usuario();
 $oUsr->user=$_POST['user'];
 $oUsr->pass=$_POST['pass'];
