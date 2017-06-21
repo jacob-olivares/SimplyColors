@@ -5,7 +5,7 @@ class Conexion{
     /*Metodo de conexion*/
     
     var $dbusr= "root";
-    var $dbpwd= "";
+    var $dbpwd= "avaras08";
     var $dbhots= "localhost";
     var $dbname= "mydba";
     public function  Conectar()

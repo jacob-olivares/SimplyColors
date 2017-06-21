@@ -45,6 +45,25 @@ class Usuario{
         }
     }
     
+    function verificarClaveAdmin(){
+        $oConn = new Conexion();
+        if ($oConn->Conectar()){
+            $db = $oConn -> objconn;
+        }else{
+            return false;
+        }
+        $clavemd5 = md5($this->pass);
+        $sql = "SELECT * FROM usuario WHERE password='$clavemd5' AND usuario='admin';";
+                $resultado=$db->query($sql);
+        
+        if($resultado->num_rows>=1){
+            return true;
+        }else{
+            return false;
+        }
+        
+    }
+            
     function agregarUsuario(){
         $oConn = new Conexion();
         if ($oConn->Conectar()){
@@ -68,6 +87,18 @@ class Usuario{
         }
         $clavemd5 = md5($this->newPass);
         $sql = "UPDATE usuario SET password = '$clavemd5' WHERE usuario = '$this->user';";
+        $resultado=$db->query($sql);
+    }
+    
+    function eliminarUsuario(){
+        $oConn = new Conexion();
+        if ($oConn->Conectar()){
+            $db = $oConn -> objconn;
+        }else{
+            return false;
+        }
+        $clavemd5 = md5($this->newPass);
+        $sql = "DELETE FROM usuario WHERE usuario='$this->user';";
         $resultado=$db->query($sql);
     }
     

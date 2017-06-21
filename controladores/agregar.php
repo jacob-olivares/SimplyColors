@@ -3,9 +3,9 @@
     include '../lib/Conexion.php';
 ?>
 <?php
-$user = $_REQUEST['user'];
-$pass = $_REQUEST['pass'];
-$confirmpass = $_REQUEST['confirm-pass'];
+$user = $_POST['user'];
+$pass = $_POST['pass'];
+$confirmpass = $_POST['confirm-pass'];
 
 $oUsr = new Usuario();
 
