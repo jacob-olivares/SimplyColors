@@ -8,3 +8,14 @@ En caso que hagan otros scripts subanlos a esa carpeta asi siempre lo mantenemos
 en linea y actualizado.
 
 Sin mas, el admin del proyecto. Jajaj
+
+## Descripción
+
+Aquí deben agregan una explicación.
+
+## Acerca del equipo
+
+
+
+## Motivación
+
