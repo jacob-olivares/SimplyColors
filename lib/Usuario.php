@@ -5,6 +5,8 @@ class Usuario{
     var $user;
     var $pass;
     var $newPass;
+    var $nombre;
+    var $apellido;
     
     /* VALIDA LA EXISTENCIA DEL USUARIO*/
     function VerificarUsuarioClave(){
@@ -73,7 +75,8 @@ class Usuario{
         }
         
         $clavemd5 = md5($this->pass);
-        $sql = "INSERT INTO usuario(usuario, password) VALUES('$this->user', '$clavemd5');";
+        $sql = "INSERT INTO usuario(usuario, password, nombre, apellido) VALUES('$this->user', '$clavemd5', '$this->nombre'"
+                . ", '$this->apellido');";
         $resultado=$db->query($sql);
         
     }

@@ -7,7 +7,7 @@ class Conexion{
     var $dbusr= "root";
     var $dbpwd= "avaras08";
     var $dbhots= "localhost";
-    var $dbname= "mydba";
+    var $dbname= "simplycolors";
     public function  Conectar()
             {
        // $miconn = new myqli("localhost","root","avaras08","exportaciones");

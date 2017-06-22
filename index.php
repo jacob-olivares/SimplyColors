@@ -1,6 +1,6 @@
 <?php
-    include './librerias.php';
     include './constantes.php';
+    include './librerias.php';
 ?>
 <html>
     <head>
@@ -40,6 +40,7 @@
         </div>
         <?php
          } 
+         var_dump($_SERVER);
         ?>
     </body>
 </html>
