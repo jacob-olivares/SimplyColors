@@ -40,7 +40,6 @@
         </div>
         <?php
          } 
-         var_dump($_SERVER);
         ?>
     </body>
 </html>
