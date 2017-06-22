@@ -4,7 +4,7 @@
         <title></title>
     </head>
     <body>
-        <form action="../controladores/usuario/eliminar.php" method="POST">
+        <form action="../../controladores/usuario/eliminar.php" method="POST">
             <div>Usuario a eliminar: <input type="text" name="user"></div>
             <div>Admin Password: <input type="password" name="pass"></div>
         <input type="submit" value="Eliminar">

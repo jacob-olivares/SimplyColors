@@ -89,7 +89,8 @@ class Usuario{
             return false;
         }
         $clavemd5 = md5($this->newPass);
-        $sql = "UPDATE usuario SET password = '$clavemd5' WHERE usuario = '$this->user';";
+        $sql = "UPDATE usuario SET password = '$clavemd5', nombre = '$this->nombre', apellido = '$this->apellido' "
+                . "WHERE usuario = '$this->user';";
         $resultado=$db->query($sql);
     }
     
