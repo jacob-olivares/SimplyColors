@@ -45,3 +45,17 @@ input[type=submit]{
     height: 20px;
     
 }
+
+
+
+
+
+/*Div's para parte privada'*/
+#Cabecera {
+    height: 73px;
+    width: 100%;
+    border:solid 3px black;
+    display:block;
+    float: top;
+    background-color: blue;
+}

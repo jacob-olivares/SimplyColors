@@ -9,8 +9,11 @@
         <title></title>
     </head>
     <body>
-        
+        <div id="Cabecera">
+            <img src="../publico/img/logo_simply_colors.png" alt=""/>
+        </div>
         <?php if(isset($_SESSION['USR'])) { ?>
+        <div id="cerrarSesion" align="right"><a href="cerrar.php">Cerrar Sesion</a></div>
             <h1>Mantenedor de usuarios: </h1>
             
             <div id="mantUsuarios"></div>
@@ -27,7 +30,15 @@
             <a href="formularios/producto/eliminarProducto.php">Eliminar Producto</a>
             </div>
             
-            <a href="cerrar.php">Cerrar Sesion</a>
+            <h1>Mantenedor de Ventas: </h1>
+            
+            <div id="mantProductos">
+            <a href="formularios/venta/agregarVenta.php">Agregar Producto</a>
+            <a href="formularios/venta/modificarVenta.php">Modificar Producto</a>
+            <a href="formularios/venta/eliminarVenta.php">Eliminar Producto</a>
+            </div>
+            
+            
         <?php } ?> 
         <?php if(!isset($_SESSION['USR'])) { ?>
         <div id="login">

@@ -9,7 +9,12 @@ $oUsr->pass=$_POST['pass'];
 
 if( $oUsr->VerificarUsuarioClave()){
     $_SESSION['USR']=$oUsr;
+    header('Location:'.$_SERVER["DOCUMENT_ROOT"].'/SimplyColors/index.php');
+}
+else
+{
+    echo 'No entra';
 }
 
-header('Location:http://localhost:8081/SimplyColors/');
+
 
