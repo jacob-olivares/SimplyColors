@@ -19,6 +19,16 @@ h1{
     margin-top: 200px;
 }
 
+input[type=number]{
+    margin: 0 0 1em 0;
+    width: 200px;
+    height: 25px;
+    border: 0px;
+    padding: 1em;
+    border-radius: 5px;
+    margin-left: 30px;
+}
+
 input[type=text]{
     margin: 0 0 1em 0;
     width: 200px;
@@ -58,4 +68,43 @@ input[type=submit]{
     display:block;
     float: top;
     background-color: blue;
+}
+
+#Cuerpo {
+    height: 500px;
+    width: 100%;
+    border:solid 3px black;
+    display:block;
+    float: top;
+    text-align: center;
+}
+
+#linea{
+    margin: auto;
+}
+
+#boton{
+    margin-top: 20px;
+    margin: auto;
+}
+
+#eliminarVenta{
+    background: seagreen;
+    width: 230px;
+    height: 100px;
+    border: 1px solid cadetblue;
+    margin: auto;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 100px;
+}
+
+#AgregarVenta{
+    background: seagreen;
+    width: 250px;
+    height: 360px;
+    border: 1px solid cadetblue;
+    margin: auto;
+    padding: 15px;
+    border-radius: 5px;
 }
