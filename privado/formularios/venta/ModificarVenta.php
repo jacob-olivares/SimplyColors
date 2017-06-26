@@ -21,9 +21,7 @@
                     <form action="../../controladores/venta/ModificarVenta.php" method="POST">
                         <div><label>ID Venta</label><input type="number" name="idVenta"></div>
                         <div><label>ID Producto</label><input type="number" name="idProducto"></div>
-                        <div><label>ID Cliente</label><input type="number" name="idCliente"></div>
                         <div><label>DNI Cliente </label><input type="text" name="dniCliente"></div>
-                        <div><label>Email Cliente</label><input type="text" name="emailCliente"></div>
                         <div><label>ID Facturacion</label><input type="text" name="idFacturacion"></div>
                         <div><label>Total</label><input type="text" name="total"></div>
                         <input type="submit" value="Agregar">
