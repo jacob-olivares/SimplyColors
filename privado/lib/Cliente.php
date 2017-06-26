@@ -8,15 +8,16 @@ class Cliente{
     var $apellidoCliente;
     var $pwdCliente;
     
-    function __construct($idAcceso=0,$nombre="",$apellido="",$nomUsuario="",$pwdUsuario=""){
-            $this->idAcceso=$idAcceso;
-            $this->nombre=$nombre;
-            $this->apellido=$apellido;
-            $this->nomUsuario=$nomUsuario;
-            $this->pwdUsuario=$pwdUsuario;
+    function __construct($idCliente=0,$dni="",$email="",$nombreCliente="",$apellidoCliente="",$pwdCliente=""){
+            $this->idCliente=$idCliente;
+            $this->dni=$dni;
+            $this->email=$email;
+            $this->nombreCliente=$nombreCliente;
+            $this->apellidoCliente=$apellidoCliente;
+            $this->pwdCliente=$pwdCliente;
     }    
-    
-    function AgregarUsuario(){
+    /*
+    function AgregarCliente(){
         $oConn=new Conexion();
         
         if ($oConn->Conectar())
@@ -89,14 +90,14 @@ class Cliente{
         else
             return false;        
     }
-    
-    function TraertUsuario()
+    */
+    function TraertCliente()
     {
         $oConn = new Conexion();
         $oConn->Conectar();
         $db = $oConn->objconn; 
 
-        $sql = "select IDUSUARIO, NOMUSUARIO, PDWUSUARIO, NOMBRE, APELLIDO from usuario where nomusuario='$this->nomUsuario';";
+        $sql = "select IDUSUARIO, NOMUSUARIO, PDWUSUARIO, NOMBRE, APELLIDO from usuario where nomusuario='$this->dni';";
         $resultado = $db->query($sql);
         
         while($fila = $resultado->fetch_assoc()){         
