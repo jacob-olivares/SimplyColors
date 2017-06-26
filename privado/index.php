@@ -13,7 +13,7 @@
             <img src="../publico/img/logo_simply_colors.png" alt=""/>
         </div>
         <?php if(isset($_SESSION['USR'])) { ?>
-        <div id="cerrarSesion" align="right"><a href="cerrar.php">Cerrar Sesion</a></div>
+        <div id="cerrarSesion" align="right"><button><a href="cerrar.php">Cerrar Sesion</a></button></div>
             <h1>Mantenedor de usuarios: </h1>
             
             <div id="mantUsuarios"></div>

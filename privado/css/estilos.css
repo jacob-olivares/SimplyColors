@@ -4,6 +4,8 @@ a{
     border: 3px solid darkgray;
 }
 
+
+
 h1{
     font-family: 'Patrick Hand SC', cursive;
 }
@@ -71,7 +73,7 @@ input[type=submit]{
 }
 
 #Cuerpo {
-    height: 500px;
+    height: 550px;
     width: 100%;
     border:solid 3px black;
     display:block;
@@ -106,5 +108,15 @@ input[type=submit]{
     border: 1px solid cadetblue;
     margin: auto;
     padding: 15px;
+    border-radius: 5px;
+}
+
+#ModificarVenta{
+    background: seagreen;
+    width: 250px;
+    height: 450px;
+    border: 1px solid cadetblue;
+    margin: auto;
+    padding: 10px;
     border-radius: 5px;
 }

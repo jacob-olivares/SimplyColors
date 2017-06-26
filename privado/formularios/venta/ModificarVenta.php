@@ -13,17 +13,22 @@
         <div id="Cabecera">
             <img src="../../../publico/img/logo_simply_colors.png" alt=""/>
         </div>
-        <div align="right"><button><a href="../paginaAdministrador/Login.php">Cancelar</a></button></div>    
+        <div align="right"><button><a id="cancelar" href="../../index.php">Cancelar</a></button></div>     
         <div id="Cuerpo">
                 <h4>Mantenedor Venta - Modificar</h4>
            
-            <form action="../../controladores/venta/ModificarVenta.php" method="POST">
-                <div><label>NickName Usuario</label><input type="text" name="nickName"></div>
-                <div><label>Contraseña</label><input type="password" name="pass"></div>
-                <div><label>Nombre </label><input type="text" name="nombreUsuario"></div>
-                <div><label>Apellido</label><input type="text" name="apUsuario"></div>
-                <input type="submit" value="Agregar">
-            </form>
+            <div id="ModificarVenta">
+                    <form action="../../controladores/venta/ModificarVenta.php" method="POST">
+                        <div><label>ID Venta</label><input type="number" name="idVenta"></div>
+                        <div><label>ID Producto</label><input type="number" name="idProducto"></div>
+                        <div><label>ID Cliente</label><input type="number" name="idCliente"></div>
+                        <div><label>DNI Cliente </label><input type="text" name="dniCliente"></div>
+                        <div><label>Email Cliente</label><input type="text" name="emailCliente"></div>
+                        <div><label>ID Facturacion</label><input type="text" name="idFacturacion"></div>
+                        <div><label>Total</label><input type="text" name="total"></div>
+                        <input type="submit" value="Agregar">
+                    </form>
+                </div>
         </div> 
                 
             

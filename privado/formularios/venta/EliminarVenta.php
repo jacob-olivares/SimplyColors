@@ -13,7 +13,7 @@
         <div id="Cabecera">
             <img src="../../../publico/img/logo_simply_colors.png" alt=""/>
         </div>
-        <div align="right"><button><a href="../paginaAdministrador/Login.php">Cancelar</a></button></div>    
+        <div align="right"><button><a id="cancelar" href="../../index.php">Cancelar</a></button></div>     
         <div id="Cuerpo">
                 <h4>Mantenedor Ventas - Eliminar</h4>
            
