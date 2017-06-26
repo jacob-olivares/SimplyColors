@@ -75,13 +75,13 @@ class Venta{
             return false;        
     }
     
-    function TraertUsuario()
+    function TraertVenta()
     {
         $oConn = new Conexion();
         $oConn->Conectar();
         $db = $oConn->objconn; 
 
-        $sql = "SELECT idVenta, idProducto, idCliente, dniCliente, emailCliente, idFacturacion, total FROM venta WHERE idVenta='$this->idVenta';";
+        $sql = "SELECT idVenta, idProducto, idCliente, dniCliente, emailCliente, idFacturacion, total FROM venta WHERE idVenta=$this->idVenta;";
         $resultado = $db->query($sql);
         
         while($fila = $resultado->fetch_assoc()){         
