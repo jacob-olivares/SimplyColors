@@ -1,16 +1,26 @@
 <?php
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- * Description of Producto
- *
- * @author cetecom
- */
 class Producto {
-    //put your code here
+    var $nprod;
+    var $idusuario;
+    var $nomUsu;
+    var $idcat;
+    var $iddisenno;
+    var $precio;
+    var $infproducto;
+    
+    function agregarProducto(){
+        $oConn = new Conexion();
+        if ($oConn->Conectar()){
+            $db = $oConn -> objconn;
+        }else{
+            return false;
+        }
+       
+        $sql = "INSERT INTO producto(idUsuario,nomUsuario,idCategoria,idDisenno,"
+                . "nombreProducto,precio,informacionProducto)VALUES($this->idusuario,$this->nomUsu,$this->idcat,
+                    $this->iddisenno,$this->nprod,$this->precio,$this->infproducto)";
+        $resultado=$db->query($sql);
+    }
+    
 }
+

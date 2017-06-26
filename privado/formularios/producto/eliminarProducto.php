@@ -1,8 +1,15 @@
-<?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <form action="../../../privado/controladores/producto/eliminar.php" method="post">
+            <div>Id Producto : <input type="number" name="idprod"></div>
+            <div>Id Usuario : <input type="number" name="idUsu"></div> 
+            <div>Id Categoria : <input type="number" name="idcat"></div>     
+            <div>Id Diseño : <input type="number" name="iddis"></div>
+            <input type="submit" value="Eliminar Producto">
+        </form>
+    </body>
+</html>
