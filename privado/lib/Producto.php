@@ -21,6 +21,14 @@ class Producto {
                     $this->iddisenno,$this->nprod,$this->precio,$this->infproducto)";
         $resultado=$db->query($sql);
     }
-    
+    function VerificarExistenciaProducto(){
+        
+    }
+    function EliminarProducto(){
+        
+    }
+    function ModificaProducto(){
+        
+    }
 }
 
