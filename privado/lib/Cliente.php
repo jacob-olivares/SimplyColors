@@ -32,7 +32,7 @@ class Cliente{
                                         $fila["email"],
                                         $fila["nombreCliente"],
                                         $fila["apellidoCliente"],
-                                        $fila["PdwCliente"]);
+                                        $fila["pdwCliente"]);
          }
          return $oCliente;
     }

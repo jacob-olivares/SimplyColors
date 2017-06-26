@@ -28,6 +28,7 @@ $oVenta->idCliente = $oClienteDB->idCliente;
 $oVenta->dniCliente = $oClienteDB->dni;
 $oVenta->emailCliente = $oClienteDB->email;
 $oVenta->total = $total;
+$oVenta->idFacturacion = $idFacturacion;
 
 
 
@@ -38,7 +39,7 @@ if($oVenta->AgregarVenta())
 <html>
     <head>
         <meta charset="UTF-8">
-        <link href="../CSS/estilos.css" rel="stylesheet" type="text/css"/>
+        <link href="../../css/estilos.css" rel="stylesheet" type="text/css"/>
         <title>Administracion Simply Colors</title>
     </head>
     <body>
@@ -47,8 +48,8 @@ if($oVenta->AgregarVenta())
             <img src="../../../publico/img/logo_simply_colors.png" alt=""/>
         </div>  
         <div id="Cuerpo">
-                <h4>Mantenedor Usuario - Agregar</h4>
-                Usuario Agregado!
+                <h4>Mantenedor Venta - Agregar</h4>
+                Venta Agregada!
                 <a href="../../index.php">Volver a Home</a>
            
             
@@ -67,7 +68,7 @@ else
 <html>
     <head>
         <meta charset="UTF-8">
-        <link href="../CSS/estilos.css" rel="stylesheet" type="text/css"/>
+        <link href="../../css/estilos.css" rel="stylesheet" type="text/css"/>
         <title>Administracion Simply Colors</title>
     </head>
     <body>
@@ -76,8 +77,8 @@ else
             <img src="../../../publico/img/logo_simply_colors.png" alt=""/>
         </div>  
         <div id="Cuerpo">
-                <h4>Mantenedor Usuario - Agregar</h4>
-                Usuario no Agregado!
+                <h4>Mantenedor Venta - Agregar</h4>
+                Venta no Agregada!
                 <a href="../../formularios/venta/AgregarVenta.php">Intenta de nuevo!</a><br>
                 <a href="../../index.php">Volver a Home</a>
            
