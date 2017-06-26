@@ -13,10 +13,12 @@
             <img src="../publico/img/logo_simply_colors.png" alt=""/>
         </div>
         <?php if(isset($_SESSION['USR'])) { ?>
+        
         <div id="cerrarSesion" align="right"><button><a href="cerrar.php">Cerrar Sesion</a></button></div>
+        <div id="Cuerpo">
             <h1>Mantenedor de usuarios: </h1>
             
-            <div id="mantUsuarios"></div>
+            <div id="mantUsuarios">
             <a href="formularios/usuario/agregarUsuario.php">Agregar Usuario</a>
             <a href="formularios/usuario/modificarUsuario.php">Modificar Usuario</a>
             <a href="formularios/usuario/eliminarUsuario.php">Eliminar Usuario</a>
@@ -37,7 +39,7 @@
             <a href="formularios/venta/ModificarVenta.php">Modificar Venta</a>
             <a href="formularios/venta/EliminarVenta.php">Eliminar Venta</a>
             </div>
-            
+        </div>
             
         <?php } ?> 
         <?php if(!isset($_SESSION['USR'])) { ?>

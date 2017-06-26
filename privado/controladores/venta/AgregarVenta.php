@@ -1,6 +1,6 @@
 <?php
-include("../Constantes.php");
-include("../Librerias.php");
+include("../../constantes.php");
+include("../../librerias.php");
 ?>
 <?php
 
@@ -11,14 +11,23 @@ $total = $_POST['total'];
 
 //Datos del Cliente de la venta
 $oCliente = new Cliente();
+$oCliente->dni=$dniCliente;
+//Trae los datos del cliente desde bdd
+$oClienteDB = $oCliente->TraertCliente();
+
 
 //Datos de la Facturacion
+
+
 
 //Datos de la Venta 
 $oVenta = new Venta();
 
 $oVenta->idProducto = $idProducto;
-
+$oVenta->idCliente = $oClienteDB->idCliente;
+$oVenta->dniCliente = $oClienteDB->dni;
+$oVenta->emailCliente = $oClienteDB->email;
+$oVenta->total = $total;
 
 
 
