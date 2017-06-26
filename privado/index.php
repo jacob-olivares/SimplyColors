@@ -33,9 +33,9 @@
             <h1>Mantenedor de Ventas: </h1>
             
             <div id="mantProductos">
-            <a href="formularios/venta/agregarVenta.php">Agregar Producto</a>
-            <a href="formularios/venta/modificarVenta.php">Modificar Producto</a>
-            <a href="formularios/venta/eliminarVenta.php">Eliminar Producto</a>
+            <a href="formularios/venta/AgregarVenta.php">Agregar Venta</a>
+            <a href="formularios/venta/ModificarVenta.php">Modificar Venta</a>
+            <a href="formularios/venta/EliminarVenta.php">Eliminar Venta</a>
             </div>
             
             
