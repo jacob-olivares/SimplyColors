@@ -24,7 +24,7 @@
                         <div><label>DNI Cliente </label><input type="text" name="dniCliente"></div>
                         <div><label>ID Facturacion</label><input type="text" name="idFacturacion"></div>
                         <div><label>Total</label><input type="text" name="total"></div>
-                        <input type="submit" value="Agregar">
+                        <input type="submit" value="Modificar">
                     </form>
                 </div>
         </div> 

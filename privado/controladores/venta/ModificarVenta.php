@@ -1,8 +1,96 @@
 <?php
+include("../../constantes.php");
+include("../../librerias.php");
+?>
+<?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+$idVenta = $_POST['idVenta'];
+$idProducto = $_POST['idProducto'];
+$dniCliente = $_POST['dniCliente'];
+$idFacturacion = $_POST['idFacturacion'];
+$total = $_POST['total'];
+
+//Datos del Cliente de la venta
+$oCliente = new Cliente();
+$oCliente->dni=$dniCliente;
+//Trae los datos del cliente desde bdd
+$oClienteDB = $oCliente->TraertCliente();
+
+
+//Datos de la Facturacion
+
+
+
+//Datos de la Venta 
+$oVenta = new Venta();
+
+$oVenta->idVenta = $idVenta;
+$oVenta->idProducto = $idProducto;
+$oVenta->idCliente = $oClienteDB->idCliente;
+$oVenta->dniCliente = $oClienteDB->dni;
+$oVenta->emailCliente = $oClienteDB->email;
+$oVenta->total = $total;
+$oVenta->idFacturacion = $idFacturacion;
+
+
+
+
+if($oVenta->ModificarVenta())
+{
+?>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="../../css/estilos.css" rel="stylesheet" type="text/css"/>
+        <title>Administracion Simply Colors</title>
+    </head>
+    <body>
+        
+        <div id="Cabecera">
+            <img src="../../../publico/img/logo_simply_colors.png" alt=""/>
+        </div>  
+        <div id="Cuerpo">
+                <h4>Mantenedor Venta - Agregar</h4>
+                Venta Agregada!
+                <a href="../../index.php">Volver a Home</a>
+           
+            
+        </div> 
+                
+            
+        </form>
+    </body>
+</html>
+
+<?php
+}
+else
+{
+    ?>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="../../css/estilos.css" rel="stylesheet" type="text/css"/>
+        <title>Administracion Simply Colors</title>
+    </head>
+    <body>
+        
+        <div id="Cabecera">
+            <img src="../../../publico/img/logo_simply_colors.png" alt=""/>
+        </div>  
+        <div id="Cuerpo">
+                <h4>Mantenedor Venta - Agregar</h4>
+                Venta no Agregada!
+                <a href="../../formularios/venta/AgregarVenta.php">Intenta de nuevo!</a><br>
+                <a href="../../index.php">Volver a Home</a>
+           
+            
+        </div> 
+                
+            
+        </form>
+    </body>
+</html>
+<?php
+}
 
