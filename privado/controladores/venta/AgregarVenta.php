@@ -6,7 +6,6 @@ include("../../librerias.php");
 
 $idProducto = $_POST['idProducto'];
 $dniCliente = $_POST['dniCliente'];
-$idFacturacion = $_POST['idFacturacion'];
 $total = $_POST['total'];
 
 //Datos del Cliente de la venta
@@ -15,10 +14,10 @@ $oCliente->dni=$dniCliente;
 //Trae los datos del cliente desde bdd
 $oClienteDB = $oCliente->TraertCliente();
 
-
-//Datos de la Facturacion
-
-
+//Trae los Datos de Facturacion del Cliente
+$oFacturacion = new Facturacion();
+$oFacturacion->dniCliente = $oClienteDB->dni;
+$oFacturacionDB = $oFacturacion->TraerFactura3();
 
 //Datos de la Venta 
 $oVenta = new Venta();
@@ -28,7 +27,7 @@ $oVenta->idCliente = $oClienteDB->idCliente;
 $oVenta->dniCliente = $oClienteDB->dni;
 $oVenta->emailCliente = $oClienteDB->email;
 $oVenta->total = $total;
-$oVenta->idFacturacion = $idFacturacion;
+$oVenta->idFacturacion = $oFacturacionDB->idFacturacion;
 
 
 

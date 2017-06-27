@@ -26,7 +26,7 @@ class Facturacion{
             $this->numeroTarjeta=$numeroTarjeta;
     }    
     
-    function TraerFactura()
+    function TraerFactura3()
     {
         $oConn = new Conexion();
         $oConn->Conectar();
@@ -37,7 +37,7 @@ class Facturacion{
         $resultado = $db->query($sql);
         
         while($fila = $resultado->fetch_assoc()){         
-          $oVenta = new Venta($fila["idFacturacion"],
+          $oFacturacion = new Facturacion($fila["idFacturacion"],
                                         $fila["idCliente"],
                                         $fila["dniCliente"],
                                         $fila["emailCliente"],
@@ -48,7 +48,7 @@ class Facturacion{
                                         $fila["calle"],
                                         $fila["numeroTarjeta"]);
          }
-         return $oVenta;
+         return $oFacturacion;
     }
     
     
