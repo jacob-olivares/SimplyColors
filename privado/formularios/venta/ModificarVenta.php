@@ -1,6 +1,17 @@
 <?php
     include '../../Constantes.php';
     include '../../Librerias.php';
+    //QUERY Cliente
+    $sqlVenta="Select idVenta, dniCliente from venta";
+    $miqueryVenta=mysqli_query($con,$sqlVenta);
+    
+    //QUERY Producto
+    $sqlProducto="select idProducto, nombreProducto from producto";
+    $miqueryProducto=mysqli_query($con,$sqlProducto);
+    
+    //QUERY Cliente
+    $sqlCliente="Select dni from cliente";
+    $miqueryCliente=mysqli_query($con,$sqlCliente);
 ?>
 <html>
     <head>
@@ -19,9 +30,48 @@
            
             <div id="ModificarVenta">
                     <form action="../../controladores/venta/ModificarVenta.php" method="POST">
-                        <div><label>ID Venta</label><input type="number" name="idVenta"></div>
-                        <div><label>ID Producto</label><input type="number" name="idProducto"></div>
-                        <div><label>DNI Cliente </label><input type="text" name="dniCliente"></div>
+                        <div><label>ID Venta</label>
+                        <select name="idVenta">
+                            <?php 
+                                while($idVentalst = mysqli_fetch_array($miqueryVenta)) { 
+                                ?> 
+                                <option value =  <?php echo $idVentalst['idVenta'];?> >
+                                <?php echo "ID Compra: ".$idVentalst['idVenta']." - "."DNI Cliente: ".$idVentalst['dniCliente']; ?>
+
+                                </option> 
+                                <?php 
+                                }
+                                ?> 
+                        </select>
+                        </div>
+                        <div><label>ID Producto</label>
+                            <select name="idProducto">
+                                    <?php 
+                                        while($idProductolst = mysqli_fetch_array($miqueryProducto)) { 
+                                        ?> 
+                                        <option value =  <?php echo $idProductolst['idProducto'];?> >
+                                        <?php echo $idProductolst['nombreProducto']; ?>
+
+                                        </option> 
+                                        <?php 
+                                        }
+                                        ?> 
+                            </select>
+                        </div>
+                        <div><label>DNI Cliente </label>
+                            <select name="dniCliente">
+                                    <?php 
+                                        while($idClientelst = mysqli_fetch_array($miqueryCliente)) { 
+                                        ?> 
+                                        <option value =  <?php echo $idClientelst['dni'];?> >
+                                        <?php echo $idClientelst['dni']; ?>
+
+                                        </option> 
+                                        <?php 
+                                        }
+                                        ?> 
+                            </select>
+                        </div>
                         <div><label>ID Facturacion</label><input type="text" name="idFacturacion"></div>
                         <div><label>Total</label><input type="text" name="total"></div>
                         <input type="submit" value="Modificar">

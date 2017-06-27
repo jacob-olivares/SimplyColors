@@ -1,6 +1,11 @@
 <?php
     include '../../Constantes.php';
     include '../../Librerias.php';
+    //QUERY Venta
+    $sqlVenta="Select idVenta, dniCliente from venta";
+    $miqueryVenta=mysqli_query($con,$sqlVenta);
+    
+    
 ?>
 <html>
     <head>
@@ -19,7 +24,20 @@
            
                 <form action="../../controladores/venta/EliminarVenta.php" method="POST">
                 <div id="eliminarVenta">
-                    <div id="linea"><label>ID VENTA</label><input type="number" name="idVenta"></div>
+                    <div id="linea"><label>ID VENTA</label>
+                        <select name="idVenta">
+                            <?php 
+                                while($idVentalst = mysqli_fetch_array($miqueryVenta)) { 
+                                ?> 
+                                <option value =  <?php echo $idVentalst['idVenta'];?> >
+                                <?php echo "ID Compra: ".$idVentalst['idVenta']." - "."DNI Cliente: ".$idVentalst['dniCliente']; ?>
+
+                                </option> 
+                                <?php 
+                                }
+                                ?> 
+                        </select>
+                    </div>
                     <div id="boton"><input type="submit" value="Eliminar"></div>
                 </div>
                     

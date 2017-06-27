@@ -17,7 +17,7 @@ if($oVenta->EliminarVenta())
 <html>
     <head>
         <meta charset="UTF-8">
-        <link href="../CSS/estilos.css" rel="stylesheet" type="text/css"/>
+        <link href="../../css/estilos.css" rel="stylesheet" type="text/css"/>
         <title>Administracion Simply Colors</title>
     </head>
     <body>
@@ -27,7 +27,7 @@ if($oVenta->EliminarVenta())
         </div>  
         <div id="Cuerpo">
                 <h4>Mantenedor Venta - Eliminar</h4>
-                Venta Agregada!
+                Venta Eliminada!
                 <a href="../../index.php">Volver a Home</a>
            
             
@@ -46,7 +46,7 @@ else
 <html>
     <head>
         <meta charset="UTF-8">
-        <link href="../CSS/estilos.css" rel="stylesheet" type="text/css"/>
+        <link href="../../CSS/estilos.css" rel="stylesheet" type="text/css"/>
         <title>Administracion Simply Colors</title>
     </head>
     <body>
@@ -56,7 +56,7 @@ else
         </div>  
         <div id="Cuerpo">
                 <h4>Mantenedor Ventas - Eliminar</h4>
-                Venta no Agregado!
+                Venta no Eliminada!
                 <a href="../../formularios/venta/AgregarVenta.php">Intenta de nuevo!</a><br>
                 <a href="../../index.php">Volver a Home</a>
            
