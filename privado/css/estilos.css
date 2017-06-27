@@ -120,3 +120,46 @@ input[type=submit]{
     padding: 10px;
     border-radius: 5px;
 }
+#AgregarProd{
+    background: seagreen;
+    width: 300px;
+    height: 350px;
+    margin-top: 50px;
+    border: 1px solid cadetblue;
+    margin: auto;
+    padding: 15px;
+    border-radius: 5px;
+}
+#eliminarProd{
+    background: seagreen;
+    width: 300px;
+    height: 90px;
+    margin-top: 50px;
+    border: 1px solid cadetblue;
+    margin: auto;
+    padding: 15px;
+    border-radius: 5px;
+}
+#ModificarProd1{
+     background: seagreen;
+     border: 1px solid cadetblue;
+     float: left; 
+     margin-left: 320px;
+     padding: 10px;
+     border-radius: 5px;
+}
+
+#ModificarProd2{
+     background: seagreen;
+     border: 1px solid cadetblue;
+     float: right;
+     margin-right: 320px;
+     padding: 10px;
+     border-radius: 5px;
+} 
+#labelprod{
+    margin-left: 45px;
+}
+#labelprod2{
+    margin-left: 45px;
+}
