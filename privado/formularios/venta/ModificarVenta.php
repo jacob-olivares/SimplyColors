@@ -9,7 +9,7 @@
         <title>Administracion Simply Colors</title>
     </head>
     <body>
-        
+        <?php if(isset($_SESSION['USR'])) { ?>
         <div id="Cabecera">
             <img src="../../../publico/img/logo_simply_colors.png" alt=""/>
         </div>
@@ -27,10 +27,12 @@
                         <input type="submit" value="Modificar">
                     </form>
                 </div>
-        </div> 
-                
-            
+        </div>   
         </form>
+        <?php }?>
+        <?php if(!isset($_SESSION['USR'])) {
+            header('Location:'.$_SERVER["DOCUMENT_ROOT"].'/SimplyColors/index.php');
+         }?>
     </body>
 </html>
 

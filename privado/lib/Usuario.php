@@ -18,7 +18,7 @@ class Usuario{
         }
         
         $clavemd5 = md5($this->pass);
-        $sql = "SELECT * FROM usuario WHERE nomUsuario='$this->user' AND pdwUsuario='$clavemd5'";
+        $sql = "SELECT * FROM usuario WHERE usuario='$this->user' AND password='$clavemd5'";
         $resultado=$db->query($sql);
         
         if($resultado->num_rows>=1){
