@@ -46,8 +46,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `simplyColors`.`PRODUCTO` (
   `idProducto` INT NOT NULL AUTO_INCREMENT ,
-  `idusuario` INT NOT NULL ,
-  `usuario` VARCHAR(20) NOT NULL ,
   `idCategoria` INT NOT NULL ,
   `idDisenno` INT NOT NULL ,
   `nombreProducto` VARCHAR(45) NOT NULL ,
@@ -55,14 +53,9 @@ CREATE  TABLE IF NOT EXISTS `simplyColors`.`PRODUCTO` (
   `precio` INT NOT NULL ,
   `informacionProducto` VARCHAR(100) NULL ,
   PRIMARY KEY (`idProducto`) ,
-  INDEX `Producto_FK_Usuario_idx` (`idusuario` ASC, `usuario` ASC) ,
   INDEX `Producto_FK_Categoria_idx` (`idCategoria` ASC) ,
   INDEX `Producto_FK_Disenno_idx` (`idDisenno` ASC) ,
-  CONSTRAINT `Producto_FK_Usuario`
-    FOREIGN KEY (`idusuario` , `usuario` )
-    REFERENCES `simplyColors`.`USUARIO` (`idusuario` , `usuario` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+
   CONSTRAINT `Producto_FK_Categoria`
     FOREIGN KEY (`idCategoria` )
     REFERENCES `simplyColors`.`CATEGORIA` (`idCategoria` )
