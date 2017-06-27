@@ -4,7 +4,15 @@ a{
     border: 3px solid darkgray;
 }
 
-
+select{
+    margin: 0 0 1em 0;
+    width: 200px;
+    height: 25px;
+    border: 0px;
+    border-radius: 5px;
+    margin-left: 30px;
+    font-family: 'Patrick Hand SC', cursive;
+}
 
 h1{
     font-family: 'Patrick Hand SC', cursive;

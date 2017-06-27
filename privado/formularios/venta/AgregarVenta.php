@@ -1,7 +1,15 @@
 <?php
     include '../../Constantes.php';
     include '../../Librerias.php';
+    //QUERY Producto
+    $sqlProducto="select idProducto, nombreProducto from producto";
+    $miqueryProducto=mysqli_query($con,$sqlProducto);
+    
+    //QUERY Cliente
+    $sqlCliente="Select dni from cliente";
+    $miqueryCliente=mysqli_query($con,$sqlCliente);
 ?>
+<?php if(isset($_SESSION['USR'])) { ?>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -9,7 +17,7 @@
         <title>Administracion Simply Colors</title>
     </head>
     <body>
-        <?php if(isset($_SESSION['USR'])) { ?>
+        
         <div id="Cabecera">
             <img src="../../../publico/img/logo_simply_colors.png" alt=""/>
         </div>
@@ -18,8 +26,34 @@
                 <h4>Mantenedor Venta - Agregar</h4>
                 <div id="AgregarVenta">
                     <form action="../../controladores/venta/AgregarVenta.php" method="POST">
-                        <div><label>ID Producto</label><input type="number" name="idProducto"></div>
-                        <div><label>DNI Cliente </label><input type="text" name="dniCliente"></div>
+                        <div><label>ID Producto</label>
+                            <select name="idProducto">
+                                <?php 
+                                    while($idProductolst = mysqli_fetch_array($miqueryProducto)) { 
+                                    ?> 
+                                    <option value =  <?php echo $idProductolst['idProducto'];?> >
+                                    <?php echo $idProductolst['nombreProducto']; ?>
+
+                                    </option> 
+                                    <?php 
+                                    }
+                                    ?> 
+                            </select>
+                        </div>
+                        <div><label>DNI Cliente </label>
+                                <select name="dniCliente">
+                                        <?php 
+                                            while($idClientelst = mysqli_fetch_array($miqueryCliente)) { 
+                                            ?> 
+                                            <option value =  <?php echo $idClientelst['dni'];?> >
+                                            <?php echo $idClientelst['dni']; ?>
+
+                                            </option> 
+                                            <?php 
+                                            }
+                                            ?> 
+                                </select>
+                        </div>
                         <div><label>ID Facturacion</label><input type="text" name="idFacturacion"></div>
                         <div><label>Total</label><input type="text" name="total"></div>
                         <input type="submit" value="Agregar">
@@ -28,10 +62,12 @@
             
         </div> 
         </form>
-        <?php }?>
-        <?php if(!isset($_SESSION['USR'])) {
-            header('Location:'.$_SERVER["DOCUMENT_ROOT"].'/SimplyColors/index.php');
-         }?>
+        
+        
     </body>
 </html>
+<?php }?>
 
+<?php if(!isset($_SESSION['USR'])) {
+            header('Location:'.$_SERVER["DOCUMENT_ROOT"].'/SimplyColors/index.php');
+         }?>
