@@ -32,17 +32,21 @@ class Facturacion{
         $oConn->Conectar();
         $db = $oConn->objconn; 
 
-        $sql = "SELECT idVenta, idProducto, idCliente, dniCliente, emailCliente, idFacturacion, total FROM venta WHERE idVenta=$this->idVenta;";
+        $sql = "SELECT idFacturacion,idCliente,dniCliente,emailCliente,idMetodoPago,codigoPostal,pais,ciudad,calle,numeroTarjeta"
+                . " FROM facturacion WHERE dniCliente='$this->dniCliente';";
         $resultado = $db->query($sql);
         
         while($fila = $resultado->fetch_assoc()){         
-          $oVenta = new Venta($fila["idVenta"],
-                                        $fila["idProducto"],
+          $oVenta = new Venta($fila["idFacturacion"],
                                         $fila["idCliente"],
                                         $fila["dniCliente"],
                                         $fila["emailCliente"],
-                                        $fila["idFacturacion"],
-                                        $fila["total"]);
+                                        $fila["idMetodoPago"],
+                                        $fila["codigoPostal"],
+                                        $fila["pais"],
+                                        $fila["ciudad"],
+                                        $fila["calle"],
+                                        $fila["numeroTarjeta"]);
          }
          return $oVenta;
     }
