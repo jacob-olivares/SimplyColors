@@ -65,28 +65,6 @@ class ConfirmacionVenta{
         else
             return false;        
     }
-    /*
-    function TraertConfirmacion()
-    {
-        $oConn = new Conexion();
-        $oConn->Conectar();
-        $db = $oConn->objconn; 
-
-        $sql = "SELECT idVenta, idProducto, idCliente, dniCliente, emailCliente, idFacturacion, total FROM venta WHERE idVenta=$this->idVenta;";
-        $resultado = $db->query($sql);
-        
-        while($fila = $resultado->fetch_assoc()){         
-          $oVenta = new Venta($fila["idVenta"],
-                                        $fila["idProducto"],
-                                        $fila["idCliente"],
-                                        $fila["dniCliente"],
-                                        $fila["emailCliente"],
-                                        $fila["idFacturacion"],
-                                        $fila["total"]);
-         }
-         return $oVenta;
-    }
-     * 
-     */
+    
     
 }
