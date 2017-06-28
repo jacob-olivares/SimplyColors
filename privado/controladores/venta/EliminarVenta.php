@@ -13,6 +13,7 @@ $oVenta->idVenta = $idVenta;
 
 if($oVenta->EliminarVenta())
 {
+    
 ?>
 <html>
     <head>
@@ -29,7 +30,29 @@ if($oVenta->EliminarVenta())
                 <h4>Mantenedor Venta - Eliminar</h4>
                 Venta Eliminada!
                 <a href="../../index.php">Volver a Home</a>
-           
+           <?php
+           /*
+            * Para Enviar Mails por la carpeta phpMailer mediante Mercury
+                require '../../phpMailer/class.phpmailer.php';
+
+                $mail = new PHPMailer;
+                $mail->Host="localhost";
+                $mail->From = "diegodiazj124@gmail.com";
+                $mail->FromName = "Administrador";
+                $mail->Subject = "Eliminacion de Venta";
+                $mail->addAddress("diegodiazj124@gmail.com","Diego");
+                $mail->msgHTML("Se ha modificado un valor de venta de simplyColors");
+                if($mail->send())
+                {
+                    echo "Se ha enviado un email al administrador";
+                }
+                else
+                {
+                    echo "Ocurrio un error al envíar el email";
+                }
+            * 
+            */
+           ?>
             
         </div> 
                 
@@ -39,6 +62,7 @@ if($oVenta->EliminarVenta())
 </html>
 
 <?php
+    
 }
 else
 {
