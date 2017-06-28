@@ -17,6 +17,9 @@ CREATE  TABLE IF NOT EXISTS `simplyColors`.`USUARIO` (
   PRIMARY KEY (`idusuario`, `usuario`) )
 ENGINE = InnoDB;
 
+INSERT INTO `usuario` (`idusuario`, `usuario`, `password`, `nombre`, `apellido`) VALUES
+(1, 'ddiazj', 'a189c633d9995e11bf8607170ec9a4b8', 'Diego', 'Diaz');
+
 
 -- -----------------------------------------------------
 -- Table `simplyColors`.`CATEGORIA`
@@ -27,6 +30,9 @@ CREATE  TABLE IF NOT EXISTS `simplyColors`.`CATEGORIA` (
   PRIMARY KEY (`idCategoria`, `tipoProducto`) )
 ENGINE = InnoDB;
 
+INSERT INTO `categoria` (`idCategoria`, `tipoProducto`) VALUES
+(1, 'Ropa'),
+(2, 'Calzado');
 
 -- -----------------------------------------------------
 -- Table `simplyColors`.`DISENNO`
@@ -40,6 +46,8 @@ CREATE  TABLE IF NOT EXISTS `simplyColors`.`DISENNO` (
   PRIMARY KEY (`idDisenno`) )
 ENGINE = InnoDB;
 
+INSERT INTO `disenno` (`idDisenno`, `color`, `talla`, `tipoLetra`, `dibujo`) VALUES
+(1, 'Rojo', 'S', 'arial', 'N');
 
 -- -----------------------------------------------------
 -- Table `simplyColors`.`PRODUCTO`
@@ -68,6 +76,9 @@ CREATE  TABLE IF NOT EXISTS `simplyColors`.`PRODUCTO` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+INSERT INTO `producto` (`idProducto`, `idCategoria`, `idDisenno`, `nombreProducto`, `cantidadStock`, `precio`, `informacionProducto`) VALUES
+(1, 1, 1, 'Polera', 10, 10000, 'Polera Roja'),
+(2, 1, 1, 'Pantalon', 20, 20000, 'Pantalon Rojo');
 
 -- -----------------------------------------------------
 -- Table `simplyColors`.`CLIENTE`
@@ -82,6 +93,10 @@ CREATE  TABLE IF NOT EXISTS `simplyColors`.`CLIENTE` (
   PRIMARY KEY (`idCliente`, `dni`, `email`) )
 ENGINE = InnoDB;
 
+INSERT INTO `cliente` (`idCliente`, `dni`, `email`, `nombreCliente`, `apellidoCliente`, `pdwCliente`) VALUES
+(1, '19585652-4', 'd.diazj@falso.com', 'Diego', 'Diaz', 'a189c633d9995e11bf8607170ec9a4b8'),
+(2, '10746273-4', 'f.lopezj@falso.com', 'Federico', 'Lopez', 'a189c633d9995e11bf8607170ec9a4b8');
+
 
 -- -----------------------------------------------------
 -- Table `simplyColors`.`METODO_PAGO`
@@ -91,6 +106,11 @@ CREATE  TABLE IF NOT EXISTS `simplyColors`.`METODO_PAGO` (
   `tipoPago` VARCHAR(20) NOT NULL ,
   PRIMARY KEY (`idMetodoPago`) )
 ENGINE = InnoDB;
+
+INSERT INTO `metodo_pago` (`idMetodoPago`, `tipoPago`) VALUES
+(1, 'Tarjeta SimplyColors'),
+(2, 'Master Card'),
+(3, 'Tarjeta de Debito');
 
 
 -- -----------------------------------------------------
@@ -121,6 +141,10 @@ CREATE  TABLE IF NOT EXISTS `simplyColors`.`FACTURACION` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+
+INSERT INTO `facturacion` (`idFacturacion`, `idCliente`, `dniCliente`, `emailCliente`, `idMetodoPago`, `codigoPostal`, `pais`, `ciudad`, `calle`, `numeroTarjeta`) VALUES
+(1, 1, '19585652-4', 'd.diazj@falso.com', 2, 123456789, 'Chile', 'Santiago', 'Fake Street 123', 555123789),
+(2, 2, '10746273-4', 'f.lopezj@falso.com', 2, 987654321, 'Chile', 'Santiago', 'Fake Street 1234', 555123789);
 
 
 -- -----------------------------------------------------
@@ -154,6 +178,10 @@ CREATE  TABLE IF NOT EXISTS `simplyColors`.`VENTA` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+
+INSERT INTO `venta` (`idVenta`, `idProducto`, `idCliente`, `dniCliente`, `emailCliente`, `idFacturacion`, `total`) VALUES
+(1, 1, 1, '19585652-4', 'd.diazj@falso.com', 1, 1000);
+
 
 
 -- -----------------------------------------------------
