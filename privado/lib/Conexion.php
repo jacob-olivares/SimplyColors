@@ -5,12 +5,12 @@ class Conexion{
     /*Metodo de conexion*/
     
     var $dbusr= "root";
-    var $dbpwd= "avaras08";
+    var $dbpwd= "";
     var $dbhots= "localhost";
     var $dbname= "simplycolors";
     public function  Conectar()
             {
-       // $miconn = new myqli("localhost","root","avaras08","exportaciones");
+       // $miconn = new myqli("localhost","root","","simplycolors");
         
                 $this->objconn = new mysqli( $this->dbhots, 
                                              $this->dbusr, 
@@ -22,4 +22,5 @@ class Conexion{
         return true;
     }
 }
+$con=mysqli_connect("localhost","root","","simplycolors");
 ?>
