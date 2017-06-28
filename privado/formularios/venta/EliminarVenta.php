@@ -1,8 +1,9 @@
 <?php
-    if(isset($_SESSION['USR'])) {
+    
     
     include '../../Constantes.php';
     include '../../Librerias.php';
+    if(isset($_SESSION['USR'])) {
     //QUERY Venta
     $sqlVenta="Select idVenta, dniCliente from venta";
     $miqueryVenta=mysqli_query($con,$sqlVenta);

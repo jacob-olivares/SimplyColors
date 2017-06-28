@@ -1,7 +1,7 @@
 <?php
-    if(isset($_SESSION['USR'])) {
     include '../../Constantes.php';
     include '../../Librerias.php';
+    if(isset($_SESSION['USR'])) {
     //QUERY Producto
     $sqlProducto="select idProducto, nombreProducto from producto";
     $miqueryProducto=mysqli_query($con,$sqlProducto);
