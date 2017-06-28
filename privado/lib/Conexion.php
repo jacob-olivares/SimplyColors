@@ -22,5 +22,6 @@ class Conexion{
         return true;
     }
 }
+//Para Conexion con Preguntas SQL de listbox Dinamicos
 $con=mysqli_connect("localhost","root","","simplycolors");
 ?>
