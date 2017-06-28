@@ -43,8 +43,7 @@ class Venta{
         if ($oConn->Conectar())
         $db=$oConn->objconn;
         else
-            return false;
-        $clavemd5=md5($this->pwdUsuario);        
+            return false;     
         $sql="UPDATE venta SET idProducto=$this->idProducto,idCliente=$this->idCliente,dniCliente='$this->dniCliente',"
                 . "emailCliente='$this->emailCliente', idFacturacion=$this->idFacturacion, total=$this->total WHERE idVenta=$this->idVenta;";
               

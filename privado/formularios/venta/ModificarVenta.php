@@ -1,4 +1,5 @@
 <?php
+    if(isset($_SESSION['USR'])) {
     include '../../Constantes.php';
     include '../../Librerias.php';
     //QUERY Cliente
@@ -20,7 +21,6 @@
         <title>Administracion Simply Colors</title>
     </head>
     <body>
-        <?php if(isset($_SESSION['USR'])) { ?>
         <div id="Cabecera">
             <img src="../../../publico/img/logo_simply_colors.png" alt=""/>
         </div>
@@ -78,10 +78,10 @@
                 </div>
         </div>   
         </form>
-        <?php }?>
-        <?php if(!isset($_SESSION['USR'])) {
-            header('Location:'.$_SERVER["DOCUMENT_ROOT"].'/SimplyColors/index.php');
-         }?>
+        
     </body>
 </html>
-
+<?php }?>
+        <?php if(!isset($_SESSION['USR'])) {
+            header('Location:http://localhost:'.$_SERVER['SERVER_PORT'].'/SimplyColors/privado/index.php');
+         }?>

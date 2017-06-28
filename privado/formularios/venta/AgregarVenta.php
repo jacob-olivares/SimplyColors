@@ -1,4 +1,5 @@
 <?php
+    if(isset($_SESSION['USR'])) {
     include '../../Constantes.php';
     include '../../Librerias.php';
     //QUERY Producto
@@ -9,7 +10,6 @@
     $sqlCliente="Select dni from cliente";
     $miqueryCliente=mysqli_query($con,$sqlCliente);
 ?>
-<?php if(isset($_SESSION['USR'])) { ?>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -68,5 +68,5 @@
 <?php }?>
 
 <?php if(!isset($_SESSION['USR'])) {
-            header('Location:'.$_SERVER["DOCUMENT_ROOT"].'/SimplyColors/index.php');
-         }?>
+            header('Location:http://localhost:'.$_SERVER['SERVER_PORT'].'/SimplyColors/privado/index.php');
+}?>

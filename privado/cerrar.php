@@ -1,5 +1,5 @@
 <?php
     session_start();
     session_destroy();
-    header('Location:'.$_SERVER["DOCUMENT_ROOT"].'/SimplyColors/index.php');
+    header('Location:http://localhost:'.$_SERVER['SERVER_PORT'].'/SimplyColors/privado/index.php');
 ?>
