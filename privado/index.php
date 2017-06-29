@@ -38,6 +38,7 @@
             <a href="formularios/venta/AgregarVenta.php">Agregar Venta</a>
             <a href="formularios/venta/ModificarVenta.php">Modificar Venta</a>
             <a href="formularios/venta/EliminarVenta.php">Eliminar Venta</a>
+            <a href="formularios/venta/ListarVentas.php">Listar Todas Las Ventas</a>
             </div>
         </div>
             

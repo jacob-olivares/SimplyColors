@@ -141,6 +141,12 @@ input[type=submit]{
     margin-top: 100px;
 }
 
+#divVista{
+    width: 180px;
+    height: 20px;
+    float: left;
+}
+
 #AgregarVenta{
     background: seagreen;
     width: 250px;
