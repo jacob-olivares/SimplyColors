@@ -13,7 +13,7 @@ $oUsr->user = $user;
 $oUsr->pass = $pass;
 
 
-if(!$oUsr->verificarClaveAdmin()){
+if(!$oUsr->verificarClave()){
     echo "La clave de administrador es incorrecta";
 }
 

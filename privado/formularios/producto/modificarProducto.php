@@ -1,4 +1,13 @@
-
+<?php
+    include '../../Constantes.php';
+    include '../../Librerias.php';
+    if(isset($_SESSION['USR'])) {
+    
+//QUERY Producto
+    $sql="select idProducto, nombreProducto from producto";
+    $query=mysqli_query($con,$sql);
+    
+?>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -15,13 +24,18 @@
         <div id="ModificarProd1">
         <form action="../../../privado/controladores/producto/agregar.php" method="post">
             <h1>Producto a Modificarse</h1>
-            <div id="labelprod">Nombre Producto :</div><div><input type="text" name="nameprod" ></div>
-            <div id="labelprod">Id Usuario : </div><div><input type="number" name="idUsu"></div>
-            <div id="labelprod">Nombre Categoria :</div><div> <input type="number" name="idcat"></div>      
-            <div id="labelprod">Nombre Usuario : </div><div><input type="text" name="nameUsu"></div>  
-            <div id="labelprod">Id Diseño : </div><div><input type="number" name="iddis"></div>
-            <div id="labelprod">Precio del Producto : </div><div><input type="number" name="precprod"></div>
-            <div id="labelprod">Informacion del producto </div><div> <input type="text" name="infprod"></div>
+            <select name="idProducto">
+                    <?php
+                    while ($idProductolst = mysqli_fetch_array($query)) {
+                        ?> 
+                        <option value =  <?php echo $idProductolst['idProducto']; ?> >
+                            <?php echo $idProductolst['nombreProducto']; ?>
+
+                        </option> 
+                        <?php
+                    }
+                    ?> 
+                </select>
         </div>
         <div id="ModificarProd2">
             <h1>Nuevos Datos de Producto. </h1>
@@ -40,3 +54,8 @@
      
     </body>
 </html>
+<?php } ?>
+<?php
+if (!isset($_SESSION['USR'])) {
+    header('Location:http://localhost:' . $_SERVER['SERVER_PORT'] . '/SimplyColors/privado/index.php');
+}?>

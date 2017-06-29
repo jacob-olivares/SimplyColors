@@ -46,25 +46,6 @@ class Usuario{
             return false;
         }
     }
-    
-    function verificarClaveAdmin(){
-        $oConn = new Conexion();
-        if ($oConn->Conectar()){
-            $db = $oConn -> objconn;
-        }else{
-            return false;
-        }
-        $clavemd5 = md5($this->pass);
-        $sql = "SELECT * FROM usuario WHERE password='$clavemd5' AND usuario='admin';";
-                $resultado=$db->query($sql);
-        
-        if($resultado->num_rows>=1){
-            return true;
-        }else{
-            return false;
-        }
-        
-    }
             
     function agregarUsuario(){
         $oConn = new Conexion();
