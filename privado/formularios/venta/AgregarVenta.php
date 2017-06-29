@@ -23,7 +23,7 @@
         </div>
         <div align="right"><button><a id="cancelar" href="../../index.php">Cancelar</a></button></div>    
         <div id="Cuerpo">
-                <h4>Mantenedor Venta - Agregar</h4>
+                <h1>Mantenedor Venta - Agregar</h1>
                 <div id="AgregarVenta">
                     <form action="../../controladores/venta/AgregarVenta.php" method="POST">
                         <div><label>ID Producto</label>

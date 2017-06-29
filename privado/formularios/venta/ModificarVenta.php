@@ -27,7 +27,7 @@
         </div>
         <div align="right"><button><a id="cancelar" href="../../index.php">Cancelar</a></button></div>     
         <div id="Cuerpo">
-                <h4>Mantenedor Venta - Modificar</h4>
+                <h1>Mantenedor Venta - Modificar</h1>
            
             <div id="ModificarVenta">
                     <form action="../../controladores/venta/ModificarVenta.php" method="POST">

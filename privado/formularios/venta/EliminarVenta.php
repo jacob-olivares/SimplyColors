@@ -22,7 +22,7 @@
         </div>
         <div align="right"><button><a id="cancelar" href="../../index.php">Cancelar</a></button></div>     
         <div id="Cuerpo">
-                <h4>Mantenedor Ventas - Eliminar</h4>
+                <h1>Mantenedor Ventas - Eliminar</h1>
            
                 <form action="../../controladores/venta/EliminarVenta.php" method="POST">
                 <div id="eliminarVenta">
