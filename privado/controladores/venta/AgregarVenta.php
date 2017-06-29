@@ -34,6 +34,9 @@ $oVenta->emailCliente = $oClienteDB->email;
 $oVenta->total = $oProductoDB->precio;
 $oVenta->idFacturacion = $oFacturacionDB->idFacturacion;
 
+//Si el stock del producto <= 0 entonces no hay stock de compra del producto y no realiza la compra
+if($oProductoDB->cantidadStock>=1)
+{
 
 if($oVenta->AgregarVenta())
 {
@@ -108,6 +111,39 @@ else
         <div id="Cuerpo">
                 <h4>Mantenedor Venta - Agregar</h4>
                 Venta no Agregada!
+                <a href="../../formularios/venta/AgregarVenta.php">Intenta de nuevo!</a><br>
+                <a href="../../index.php">Volver a Home</a>
+           
+            
+        </div> 
+                
+            
+        </form>
+    </body>
+</html>
+<?php
+}
+    //Cuando se agrega una venta de un producto entonces baja el stock del producto en 1
+    $oProductoDB->cantidadStock = $oProductoDB->cantidadStock-1;
+    //$oProducto->ModificaProducto();
+}
+else
+{
+    ?>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="../../css/estilos.css" rel="stylesheet" type="text/css"/>
+        <title>Administracion Simply Colors</title>
+    </head>
+    <body>
+        
+        <div id="Cabecera">
+            <img src="../../../publico/img/logo_simply_colors.png" alt=""/>
+        </div>  
+        <div id="Cuerpo">
+                <h4>Mantenedor Venta - Agregar</h4>
+                Venta no Agregada debido a que no hay stock del producto!
                 <a href="../../formularios/venta/AgregarVenta.php">Intenta de nuevo!</a><br>
                 <a href="../../index.php">Volver a Home</a>
            
