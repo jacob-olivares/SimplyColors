@@ -39,6 +39,11 @@ $oVenta->idFacturacion = $oFacturacionDB->idFacturacion;
 
 if($oVenta->AgregarVenta())
 {
+    /*
+    $oConfirmacion = new ConfirmacionVenta();
+    $oConfirmacion->entregado=false;
+     * 
+     */
 ?>
 <html>
     <head>
@@ -55,7 +60,29 @@ if($oVenta->AgregarVenta())
                 <h4>Mantenedor Venta - Agregar</h4>
                 Venta Agregada!
                 <a href="../../index.php">Volver a Home</a>
-           
+           <?php
+           /*
+            * Para Enviar Mails por la carpeta phpMailer mediante Mercury
+                require '../../phpMailer/class.phpmailer.php';
+
+                $mail = new PHPMailer;
+                $mail->Host="localhost";
+                $mail->From = "diegodiazj124@gmail.com";
+                $mail->FromName = "Administrador";
+                $mail->Subject = "Venta Agregada";
+                $mail->addAddress("diegodiazj124@gmail.com","Diego");
+                $mail->msgHTML("Se ha agregado un valor de venta de simplyColors");
+                if($mail->send())
+                {
+                    echo "Se ha enviado un email al administrador";
+                }
+                else
+                {
+                    echo "Ocurrio un error al envíar el email";
+                }
+            * 
+            */
+           ?>
             
         </div> 
                 

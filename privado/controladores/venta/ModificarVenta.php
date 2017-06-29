@@ -51,10 +51,32 @@ if($oVenta->ModificarVenta())
             <img src="../../../publico/img/logo_simply_colors.png" alt=""/>
         </div>  
         <div id="Cuerpo">
-                <h4>Mantenedor Venta - Agregar</h4>
-                Venta Agregada!
+                <h4>Mantenedor Venta - Modificarr</h4>
+                Venta Modificada!
                 <a href="../../index.php">Volver a Home</a>
-           
+           <?php
+           /*
+            * Para Enviar Mails por la carpeta phpMailer mediante Mercury
+                require '../../phpMailer/class.phpmailer.php';
+
+                $mail = new PHPMailer;
+                $mail->Host="localhost";
+                $mail->From = "diegodiazj124@gmail.com";
+                $mail->FromName = "Administrador";
+                $mail->Subject = "Modificacion de Venta";
+                $mail->addAddress("diegodiazj124@gmail.com","Diego");
+                $mail->msgHTML("Se ha modificado un valor de venta de simplyColors");
+                if($mail->send())
+                {
+                    echo "Se ha enviado un email al administrador";
+                }
+                else
+                {
+                    echo "Ocurrio un error al envíar el email";
+                }
+            * 
+            */
+           ?>
             
         </div> 
                 
@@ -80,8 +102,8 @@ else
             <img src="../../../publico/img/logo_simply_colors.png" alt=""/>
         </div>  
         <div id="Cuerpo">
-                <h4>Mantenedor Venta - Agregar</h4>
-                Venta no Agregada!
+                <h4>Mantenedor Venta - Modificar</h4>
+                Venta no Modificada!
                 <a href="../../formularios/venta/AgregarVenta.php">Intenta de nuevo!</a><br>
                 <a href="../../index.php">Volver a Home</a>
            
