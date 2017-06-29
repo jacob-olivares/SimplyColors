@@ -26,14 +26,9 @@ class Producto{
             return false;
         }
        
-        $sql = "INSERT INTO producto(idCategoria,idDisenno,nombreProducto,stock,precio,cantidadStock,informacionProducto)VALUES($this->idCategoria,"
-                . " $this->idDisenno,$this->nombreProducto,$this->cantidadStock,$this->precio,$this->informacionProducto)";
+        $sql = "INSERT INTO producto(idCategoria,idDisenno,nombreProducto,cantidadStock,precio,informacionProducto)VALUES($this->idCategoria,"
+                . " $this->idDisenno,'$this->nombreProducto',$this->cantidadStock,$this->precio,'$this->informacionProducto');";
         $resultado=$db->query($sql);
-        
-           if ($resultado)
-            return true;
-        else
-            return false;  
     }
     function VerificarExistenciaProducto(){
         

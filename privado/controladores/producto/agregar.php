@@ -9,8 +9,8 @@ $idCategoria = $_POST['idCategoria'];
 $idDisenno = $_POST['idDisenno'];
 $nombreProducto = $_POST['nombreProducto'];
 $precio = $_POST['precio'];
-$cantidadStock = $_POST['cantidadStock'];
-$informacionProducto = $_POST['informacionProducto'];
+$cantidadStock = $_POST['stock'];
+$informacionProducto = $_POST['info'];
 
 
 $oProd = new Producto();
@@ -22,8 +22,4 @@ $oProd ->cantidadStock = $cantidadStock;
 $oProd ->precio = $precio;
 $oProd ->informacionProducto = $informacionProducto;
 
-
-
-
-
-$oUsr->agregarProducto();
+$oProd->agregarProducto();
