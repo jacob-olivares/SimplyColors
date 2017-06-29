@@ -1,6 +1,6 @@
 <?php
 class Producto {
-    var $nprod;
+    var $idProducto;
     var $idcat;
     var $iddisenno;
     var $precio;
@@ -27,6 +27,7 @@ class Producto {
     function ModificaProducto(){
         
     }
+    
     function llenarCombobox(){
                 
         $oConn = new Conexion();
@@ -46,6 +47,28 @@ class Producto {
         } else {
             echo "No hubo resultados";
         }
+    }
+    
+    
+    function TraertProducto()
+    {
+        $oConn = new Conexion();
+        $oConn->Conectar();
+        $db = $oConn->objconn; 
+
+        $sql = "SELECT idProducto,idCategoria,idDisenno,nombreProducto,cantidadStock,precio,informacionProducto FROM producto WHERE idProducto=$this->idProducto;";
+        $resultado = $db->query($sql);
+        
+        while($fila = $resultado->fetch_assoc()){         
+          $oProducto = new Producto($fila["idProducto"],
+                                        $fila["idCategoria"],
+                                        $fila["idDisenno"],
+                                        $fila["nombreProducto"],
+                                        $fila["cantidadStock"],
+                                        $fila["precio"],
+                                        $fila["informacionProducto"]);
+         }
+         return $oProducto;
     }
 
 }

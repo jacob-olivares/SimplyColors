@@ -19,6 +19,13 @@ $oFacturacion = new Facturacion();
 $oFacturacion->dniCliente = $oClienteDB->dni;
 $oFacturacionDB = $oFacturacion->TraerFactura3();
 
+/*
+//Traer los Datos del Producto
+$oProducto = new Producto();
+$oProducto->idProducto=$idProducto;
+$oProductoDB = $oProducto->TraertProducto();
+*/
+
 //Datos de la Venta 
 $oVenta = new Venta();
 
@@ -28,8 +35,6 @@ $oVenta->dniCliente = $oClienteDB->dni;
 $oVenta->emailCliente = $oClienteDB->email;
 $oVenta->total = $total;
 $oVenta->idFacturacion = $oFacturacionDB->idFacturacion;
-
-
 
 
 if($oVenta->AgregarVenta())
