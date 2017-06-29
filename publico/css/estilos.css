@@ -2,10 +2,416 @@ body{
     background: #77D2E5;
     margin-left: 195px;
     margin-top: 0px;
+    float: left;
+    display: block;
+
+}
+
+#barraSuperior{
+    width: 980px;
+    height: 72px;
+    background: #77D2E5;
+    float: left;
+    display: block;
+
 }
 #contenedor{
     height: 1593px;
     width: 960px;
     background: white;
-    margin-top: 90px;
+    margin-top: 0px;
+    float: left;
+    display: block;
+
+}
+#buscaProducto{
+    margin-top: 10px;
+    margin-left: 500px;
+    width: 223px;
+    height: 31px;
+    float: left;
+    display: block;
+
+}
+
+#contImg{
+    width: 940px;
+    height: 270px;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+    display: block;
+}
+
+#menu{
+    width: 715px;
+    height: 81px;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+    display: block;
+}
+
+li{
+    float: left;
+    margin-top: 10px;
+    background-color: red;
+    border-right-color: white;
+    border-right-style: solid;
+    box-sizing: border-box;
+    border-right-width: 1px;
+    color: white;
+    display: list-item;
+    height: 36px;
+    display: block;
+
+}
+ul{
+    list-style-type: none;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 18px;
+}
+li:hover{
+
+    float: left;
+    margin-top: 10px;
+    background-color: white;
+    border-right-color: white;
+    border-right-style: solid;
+    box-sizing: border-box;
+    border-right-width: 1px;
+    display: list-item;
+    height: 36px;
+}
+
+li a:hover{
+
+    color: black;
+}
+
+
+#barraInferior{
+    box-sizing:
+        border-box
+        ;
+    color:
+        rgb(51, 51, 51)
+        ;
+    display:
+        block
+        ;
+    float:
+        left
+        ;
+    font-family:
+        SegoeUI, Arial, Verdana, sans-serif
+        ;
+    font-size:
+        13px
+        ;
+    height:
+        93px
+        ;
+    line-height:
+        18px
+        ;
+    min-height:
+        1px
+        ;
+    padding-left:
+        10px
+        ;
+    padding-right:
+        10px
+        ;
+    position:
+        relative
+        ;
+    text-size-adjust:
+        100%
+        ;
+    width:
+        940px
+        ;
+}
+
+#barraInfCont{
+    background-clip:border-box;
+    background-color: rgb(119, 210, 229);
+    background-image: none;
+    background-origin: padding-box;
+    background-size:auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-sizing: border-box;
+    color:
+        rgb(255, 255, 255)
+        ;
+    display:
+        block
+        ;
+    font-family:
+        SegoeUI, Arial, Verdana, sans-serif
+        ;
+    font-size:
+        14px
+        ;
+    height:
+        53px
+        ;
+    line-height:
+        18px
+        ;
+    margin-bottom:
+        20px
+        ;
+    margin-left:
+        0px
+        ;
+    margin-right:
+        0px
+        ;
+    margin-top:
+        320px
+        ;
+    padding-bottom:
+        15px
+        ;
+    padding-left:
+        15px
+        ;
+    padding-right:
+        15px
+        ;
+    padding-top:
+        13px
+        ;
+    text-size-adjust:
+        100%
+        ;
+}
+contBarraInf{
+    border-collapse:
+        collapse
+        ;
+    box-sizing:
+        border-box
+        ;
+    color:
+        rgb(255, 255, 255)
+        ;
+    display:
+        table-cell
+        ;
+    font-family:
+        SegoeUI, Arial, Verdana, sans-serif
+        ;
+    font-size:
+        14px
+        ;
+    height:
+        25px
+        ;
+    line-height:
+        18px
+        ;
+    padding-bottom:
+        0px
+        ;
+    padding-left:
+        0px
+        ;
+    padding-right:
+        0px
+        ;
+    padding-top:
+        0px
+        ;
+    text-size-adjust:
+        100%
+        ;
+    vertical-align:
+        middle
+        ;
+    white-space:
+        nowrap
+        ;
+    width:
+        252px
+        ;
+}
+
+op{
+    box-sizing:
+border-box
+;
+color:
+rgb(51, 51, 51)
+;
+display:
+block
+;
+float:
+left
+;
+font-family:
+SegoeUI, Arial, Verdana, sans-serif
+;
+font-size:
+13px
+;
+height:
+290px
+;
+line-height:
+18px
+;
+min-height:
+1px
+;
+padding-left:
+10px
+;
+padding-right:
+10px
+;
+position:
+relative
+;
+text-size-adjust:
+100%
+;
+width:
+313.328px
+;
+}
+opCont{
+    background-attachment:
+scroll
+;
+background-clip:
+border-box
+;
+background-color:
+rgb(119, 210, 229)
+;
+background-image:
+none
+;
+background-origin:
+padding-box
+;
+background-size:
+auto
+;
+border-bottom-left-radius:
+10px
+;
+border-bottom-right-radius:
+10px
+;
+border-top-left-radius:
+10px
+;
+border-top-right-radius:
+10px
+;
+box-sizing:
+border-box
+;
+color:
+rgb(51, 51, 51)
+;
+display:
+block
+;
+font-family:
+SegoeUI, Arial, Verdana, sans-serif
+;
+font-size:
+13px
+;
+height:
+270px
+;
+line-height:
+18px
+;
+margin-bottom:
+20px
+;
+margin-left:
+0px
+;
+margin-right:
+0px
+;
+margin-top:
+0px
+;
+padding-bottom:
+18px
+;
+padding-left:
+18px
+;
+padding-right:
+18px
+;
+padding-top:
+18px
+;
+position:
+relative
+;
+text-size-adjust:
+100%
+;
+width:
+293.328px
+;
+}
+barraCentral{
+    box-sizing:
+border-box
+;
+color:
+rgb(51, 51, 51)
+;
+display:
+block
+;
+font-family:
+SegoeUI, Arial, Verdana, sans-serif
+;
+font-size:
+13px
+;
+height:
+290px
+;
+line-height:
+18px
+;
+margin-left:
+-10px
+;
+margin-right:
+-10px
+;
+text-size-adjust:
+100%
+;
+width:
+940px
+;
+background-color: black;
 }
