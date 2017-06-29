@@ -54,7 +54,7 @@ class Producto{
         $oConn->Conectar();
         $db = $oConn->objconn; 
 
-        $sql = "SELECT idProducto,$tipoCategoria,idDisenno,nombreProducto,cantidadStock,precio,informacionProducto FROM producto WHERE idProducto=$this->idProducto;";
+        $sql = "SELECT idProducto,idCategoria,idDisenno,nombreProducto,cantidadStock,precio,informacionProducto FROM producto WHERE idProducto=$this->idProducto;";
         $resultado = $db->query($sql);
         
         while($fila = $resultado->fetch_assoc()){         

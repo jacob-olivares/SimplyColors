@@ -7,7 +7,6 @@ include("../../librerias.php");
 $idVenta = $_POST['idVenta'];
 $idProducto = $_POST['idProducto'];
 $dniCliente = $_POST['dniCliente'];
-$total = $_POST['total'];
 
 //Datos del Cliente de la venta
 $oCliente = new Cliente();
