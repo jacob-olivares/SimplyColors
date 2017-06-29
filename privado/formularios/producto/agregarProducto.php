@@ -19,12 +19,14 @@
                 <select name="tipoCategoria">
                     <option value="seleccione">Seleccione</option>
                     <?php echo $combobit; ?>
-                </select></div>
-                <div>Id Diseño : <input type="number" name="iddis"></div>
+                </select>
+                </div>
+                <div>Id Diseño : <input type="number" name="iddis"></div><br>
                 <div>Stock : <input type="number" name="stock"></div>
                 <div>Precio del Producto : <input type="number" name="precprod"></div>
                 <div>Informacion del producto : <input type="text" name="infprod"></div>
                 <input type="submit" value="Ingresa Producto">
+                
          </div>
         </div>
             </form>

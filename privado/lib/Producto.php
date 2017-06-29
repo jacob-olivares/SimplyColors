@@ -1,13 +1,24 @@
 <?php
-class Producto {
+
+class Producto{
     var $idProducto;
-    var $idcat;
-    var $iddisenno;
+    var $idCategoria;
+    var $idDisenno;
+    var $nombreProducto;
+    var $cantidadStock;
     var $precio;
-    var $infproducto;
-    var $stock;
+    var $informacionProducto;
     
-    function agregarProducto(){
+    function __construct($idProducto=0,$idCategoria=0,$idDisenno=0,$nombreProducto="",$cantidadStock=0,$precio=0,$informacionProducto=""){
+            $this->idProducto=$idProducto;
+            $this->idCategoria=$idCategoria;
+            $this->idDisenno=$idDisenno;
+            $this->nombreProducto=$nombreProducto;
+            $this->cantidadStock=$cantidadStock;
+            $this->precio=$precio;
+            $this->informacionProducto=$informacionProducto;
+    }   
+     function agregarProducto(){
         $oConn = new Conexion();
         if ($oConn->Conectar()){
             $db = $oConn -> objconn;
@@ -55,6 +66,11 @@ class Producto {
         $oConn = new Conexion();
         $oConn->Conectar();
         $db = $oConn->objconn; 
+    function TraertProducto()
+    {
+        $oConn = new Conexion();
+        $oConn->Conectar();
+        $db = $oConn->objconn; 
 
         $sql = "SELECT idProducto,idCategoria,idDisenno,nombreProducto,cantidadStock,precio,informacionProducto FROM producto WHERE idProducto=$this->idProducto;";
         $resultado = $db->query($sql);
@@ -70,6 +86,7 @@ class Producto {
          }
          return $oProducto;
     }
-
+    
 }
 
+}
