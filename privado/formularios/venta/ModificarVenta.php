@@ -73,7 +73,6 @@
                                         ?> 
                             </select>
                         </div>
-                        <div><label>Total</label><input type="text" name="total"></div>
                         <input type="submit" value="Modificar">
                     </form>
                 </div>

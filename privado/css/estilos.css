@@ -144,7 +144,7 @@ input[type=submit]{
 #AgregarVenta{
     background: seagreen;
     width: 250px;
-    height: 220px;
+    height: 180px;
     border: 1px solid cadetblue;
     margin: auto;
     padding: 15px;
@@ -154,7 +154,7 @@ input[type=submit]{
 #ModificarVenta{
     background: seagreen;
     width: 250px;
-    height: 270px;
+    height: 230px;
     border: 1px solid cadetblue;
     margin: auto;
     padding: 10px;
