@@ -26,14 +26,34 @@ class Producto{
             return false;
         }
        
-        $sql = "";
+        $sql = "INSERT INTO producto(idCategoria,idDisenno,nombreProducto,stock,precio,cantidadStock,informacionProducto)VALUES($this->idCategoria,"
+                . " $this->idDisenno,$this->nombreProducto,$this->cantidadStock,$this->precio,$this->informacionProducto)";
         $resultado=$db->query($sql);
+        
+           if ($resultado)
+            return true;
+        else
+            return false;  
     }
     function VerificarExistenciaProducto(){
         
     }
     function EliminarProducto(){
+        $oConn=new Conexion();
         
+        if ($oConn->Conectar())
+        $db=$oConn->objconn;
+        else
+            return false;
+        
+        $sql="DELETE FROM producto WHERE idProducto='$this->idProducto'";
+              
+        $resultado=$db->query($sql);
+               
+        if ($resultado)
+            return true;
+        else
+            return false;      
     }
     function ModificaProducto(){
         
@@ -67,7 +87,7 @@ class Producto{
         $oConn->Conectar();
         $db = $oConn->objconn; 
 
-        $sql = "SELECT idProducto,idCategoria,idDisenno,nombreProducto,cantidadStock,precio,informacionProducto FROM producto WHERE idProducto=$this->idProducto;";
+        $sql = "SELECT idProducto,$tipoCategoria,idDisenno,nombreProducto,cantidadStock,precio,informacionProducto FROM producto WHERE idProducto=$this->idProducto;";
         $resultado = $db->query($sql);
         
         while($fila = $resultado->fetch_assoc()){         

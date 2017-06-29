@@ -1,3 +1,4 @@
+
 <html>
     <head>
         <meta charset="UTF-8">
@@ -6,6 +7,8 @@
     </head>
     <body>
          <div id="Cabecera">
+           
+            
             <img src="../../../publico/img/logo_simply_colors.png" alt=""/>
         </div>
         <div align="right"><button><a id="cancelar" href="../../index.php">Cancelar</a></button></div>    
@@ -32,6 +35,8 @@
             <div id="labelprod2">Informacion del producto : </div><div><input type="text" name="infprod"></div>
             <input type="submit" value="Modifica Producto">
         </form>
+            
         </div>
+     
     </body>
 </html>

@@ -6,6 +6,8 @@
     </head>
     <body>
          <div id="Cabecera">
+             
+            
             <img src="../../../publico/img/logo_simply_colors.png" alt=""/>
         </div>
         <div align="right"><button><a id="cancelar" href="../../index.php">Cancelar</a></button></div>    
@@ -18,5 +20,6 @@
         </form>
         </div>
         </div>
+      
     </body>
 </html>

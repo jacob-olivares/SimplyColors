@@ -4,20 +4,24 @@
  ?>
 
 <?php
-$nprod = $_POST['nameprod'];
-$idcat = $_POST['idcat'];
-$iddisenno = $_POST['iddis'];
-$precio = $_POST['precprod'];
-$infproducto = $_POST['infprod'];
-$stock = $_POST['stock'];
 
-$oUsr = new Producto();
+$idCategoria = $_POST['idCategoria'];
+$idDisenno = $_POST['idDisenno'];
+$nombreProducto = $_POST['nombreProducto'];
+$precio = $_POST['precio'];
+$cantidadStock = $_POST['cantidadStock'];
+$informacionProducto = $_POST['informacionProducto'];
 
-$oUsr ->nprod = $nprod;
-$oUsr ->idcat = $idcat;
-$oUsr ->iddisenno = $iddisenno;
-$oUsr ->precio = $precio;
-$oUsr ->infproducto = $infproducto;
+
+$oProd = new Producto();
+
+$oProd ->idCategoria = $idCategoria;
+$oProd ->idDisenno = $idDisenno;
+$oProd ->nombreProducto = $nombreProducto;
+$oProd ->cantidadStock = $cantidadStock;
+$oProd ->precio = $precio;
+$oProd ->informacionProducto = $informacionProducto;
+
 
 
 

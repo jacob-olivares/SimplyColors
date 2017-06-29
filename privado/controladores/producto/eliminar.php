@@ -5,10 +5,10 @@
  ?>
 <?php
 
-$idproducto = $_POST['idprod'];
+$idProducto = $_POST['idProducto'];
 
- $oUsr = new Producto();
+ $oProd = new Producto();
  
-$oUsr ->idproducto = $idproducto;
+$oProd ->idProducto = $idProducto;
         
-$oUsr -> EliminarProducto();
+$oProd -> EliminarProducto();

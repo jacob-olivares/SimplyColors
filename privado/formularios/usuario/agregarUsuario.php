@@ -4,6 +4,7 @@
         <title></title>
     </head>
     <body>
+         
         <form action="../../controladores/usuario/agregar.php" method="POST">
             <div>Usuario: <input type="text" name="user"></div>
             <div>Password: <input type="password" name="pass"></div>
@@ -12,5 +13,6 @@
             <div>Apellido Usuario: <input type="text" name="apellido"></div>
         <input type="submit" value="Enviar"> 
         </form>
+                     
 </html>
 
