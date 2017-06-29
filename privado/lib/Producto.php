@@ -60,13 +60,8 @@ class Producto{
         }
     }
     
-    
-    function TraertProducto()
-    {
-        $oConn = new Conexion();
-        $oConn->Conectar();
-        $db = $oConn->objconn; 
-    function TraertProducto()
+ 
+    function TraerProducto()
     {
         $oConn = new Conexion();
         $oConn->Conectar();
@@ -89,4 +84,3 @@ class Producto{
     
 }
 
-}
