@@ -45,7 +45,14 @@ class Producto{
         $resultado=$db->query($sql);
 
     }
-    function ModificaProducto(){
+    function ModificaProducto(){     
+        $oConn = new Conexion();
+        if ($oConn->Conectar()) {
+            $db = $oConn->objconn;
+        } else {
+            return false;
+        }
+        
         
     }
     function TraerProducto()
