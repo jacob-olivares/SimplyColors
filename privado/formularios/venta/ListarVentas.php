@@ -17,36 +17,32 @@
         <div id="Cabecera">
             <img src="../../../publico/img/logo_simply_colors.png" alt=""/>
         </div>
-        <div align="right"><button><a id="cancelar" href="../../index.php">Cancelar</a></button></div>    
-        <div id="Cuerpo">
+        <div align="right"><button><a id="cancelar" href="../../index.php">Cancelar</a></button></div>
+            <div id="ListarVentas">
                 <h1>Mantenedor Venta - Lista de Ventas</h1>
                 <div>
-                        <div id="divVista">ID VENTA</div>
-                        <div id="divVista">ID PRODUCTO</div>
-                        <div id="divVista">ID CLIENTE</div>
-                        <div id="divVista">DNI CLIENTE</div>
-                        <div id="divVista">EMAIL VENTA</div>
-                        <div id="divVista">ID FACTURACION</div>
-                        <div id="divVista">TOTAL</div><BR>
-                            <?php 
-                                while($idVentalst = mysqli_fetch_array($miqueryVenta)) { 
-                                    echo '<div id="divVista">'.$idVentalst['idVenta'].'</div>'
-                                            .'<div id="divVista">'.$idVentalst['idProducto'].'</div>'
-                                            .'<div id="divVista">'.$idVentalst['idCliente'].'</div>'
-                                            .'<div id="divVista">'.$idVentalst['dniCliente'].'</div>'
-                                            .'<div id="divVista">'.$idVentalst['emailCliente'].'</div>'
-                                            .'<div id="divVista">'.$idVentalst['idFacturacion'].'</div>'
-                                            .'<div id="divVista">'.$idVentalst['total'].'</div><br>'; 
-                                }
-                            ?>
-                    </div>
-                        
+                    <div id="divVista">ID VENTA</div>
+                    <div id="divVista">ID PRODUCTO</div>
+                    <div id="divVista">ID CLIENTE</div>
+                    <div id="divVista">DNI CLIENTE</div>
+                    <div id="divVista">EMAIL VENTA</div>
+                    <div id="divVista">ID FACTURACION</div>
+                    <div id="divVista">TOTAL</div><BR>
+                        <?php 
+                            while($idVentalst = mysqli_fetch_array($miqueryVenta)) { 
+                                echo '<div id="divVista">'.$idVentalst['idVenta'].'</div>'
+                                        .'<div id="divVista">'.$idVentalst['idProducto'].'</div>'
+                                        .'<div id="divVista">'.$idVentalst['idCliente'].'</div>'
+                                        .'<div id="divVista">'.$idVentalst['dniCliente'].'</div>'
+                                        .'<div id="divVista">'.$idVentalst['emailCliente'].'</div>'
+                                        .'<div id="divVista">'.$idVentalst['idFacturacion'].'</div>'
+                                        .'<div id="divVista">'.$idVentalst['total'].'</div><br>'; 
+                            }
+                        ?>
                 </div>
-            
-        </div> 
-        </form>
-        
-        
+                        
+            </div>
+        </div>        
     </body>
 </html>
 <?php }?>
