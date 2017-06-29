@@ -7,7 +7,7 @@
 
 $idProducto = $_POST['idProducto'];
 
- $oProd = new Producto();
+$oProd = new Producto();
  
 $oProd ->idProducto = $idProducto;
         

@@ -34,48 +34,20 @@ class Producto{
         
     }
     function EliminarProducto(){
-        $oConn=new Conexion();
-        
-        if ($oConn->Conectar())
-        $db=$oConn->objconn;
-        else
-            return false;
-        
-        $sql="DELETE FROM producto WHERE idProducto='$this->idProducto'";
-              
-        $resultado=$db->query($sql);
-               
-        if ($resultado)
-            return true;
-        else
-            return false;      
-    }
-    function ModificaProducto(){
-        
-    }
-    
-    function llenarCombobox(){
-                
         $oConn = new Conexion();
         if ($oConn->Conectar()){
             $db = $oConn -> objconn;
         }else{
             return false;
         }
-        $sql = "SELECT * from categoria";
-        $result = $db->query($sql); //usamos la conexion para dar un resultado a la variable
+        
+        $sql="DELETE FROM producto WHERE idProducto=$this->idProducto";
+        $resultado=$db->query($sql);
 
-        if ($result->num_rows > 0) { //si la variable tiene al menos 1 fila entonces seguimos con el codigo
-            $combobit = "";
-            while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
-                $combobit .=" <option value='" . $row['idCategoria'] . "'>" . $row['tipoCategoria'] . "</option>"; //concatenamos el los options para luego ser insertado en el HTML
-            }
-        } else {
-            echo "No hubo resultados";
-        }
     }
-    
- 
+    function ModificaProducto(){
+        
+    }
     function TraerProducto()
     {
         $oConn = new Conexion();

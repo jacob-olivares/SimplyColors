@@ -1,3 +1,12 @@
+<?php
+    include '../../Constantes.php';
+    include '../../Librerias.php';
+    if(isset($_SESSION['USR'])) {
+    //QUERY Categoria
+    $sql="select idProducto, nombreProducto from producto";
+    $query=mysqli_query($con,$sql);
+    
+?>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -15,7 +24,18 @@
             <h1>Eliminar Producto!</h1>
             <div id="eliminarProd">
         <form action="../../../privado/controladores/producto/eliminar.php" method="post">
-            <div>Id Producto : <input type="number" name="idprod"></div>
+            <select name="idProducto">
+                    <?php
+                    while ($idProductolst = mysqli_fetch_array($query)) {
+                        ?> 
+                        <option value =  <?php echo $idProductolst['idProducto']; ?> >
+                            <?php echo $idProductolst['nombreProducto']; ?>
+
+                        </option> 
+                        <?php
+                    }
+                    ?> 
+                </select>
             <input type="submit" value="Eliminar Producto">
         </form>
         </div>
@@ -23,3 +43,9 @@
       
     </body>
 </html>
+
+<?php } ?>
+<?php
+if (!isset($_SESSION['USR'])) {
+    header('Location:http://localhost:' . $_SERVER['SERVER_PORT'] . '/SimplyColors/privado/index.php');
+}?>
